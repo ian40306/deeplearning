@@ -43,7 +43,7 @@ $tar -xzvf ssd_mobilenet_v1_coco_2018_01_28.tar.gz
 $cp sample/config/
 ## 訓練
 移動py檔案  
-$cp legacy/train.py .
+$cp legacy/train.py .  
 開始訓練  
 $CUDA_VISIBLE_DEVICES=0,1,2 python train.py \\  
   --logtostderr \\  
