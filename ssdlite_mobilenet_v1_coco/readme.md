@@ -43,7 +43,7 @@ $tar -xzvf ssd_mobilenet_v1_coco_2018_01_28.tar.gz
 $  
 ## 開始訓練
 ### 訓練
-$CUDA_VISIBLE_DEVICES=0,1,2 python train.py \
+$CUDA_VISIBLE_DEVICES=0,1,2 python train.py ~\
   --logtostderr \
   --pipeline_config_path=ssd_mobilenet_v1_coco.config \
   --train_dir=training_model \
