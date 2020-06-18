@@ -40,7 +40,7 @@ $cp deeplearning/make_dataset.py .
 ### 處理model包
 $wget http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v1_coco_2018_01_28.tar.gz  
 $tar -xzvf ssd_mobilenet_v1_coco_2018_01_28.tar.gz  
-$cp sample/config/
+$cp sample/config/ssd_mobilenet_v1_coco.config .
 ## 訓練
 移動py檔案  
 $cp legacy/train.py .  
@@ -61,3 +61,5 @@ $python export_tflite_ssd_graph.py \\
 --trained_checkpoint_prefix=/usr/local/lib/python3.6/dist-packages/tensorflow/models/research/object_detection/training_model/model.ckpt-69914 \\  
 --output_directory=/usr/local/lib/python3.6/dist-packages/tensorflow/models/research/object_detection/training \\  
 --add_postprocessing_op=true  
+接著修改turn.py裡面的graph_def_file(改成上面輸出之pb檔案位置)  
+$python turn.py
