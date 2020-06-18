@@ -40,7 +40,10 @@ $cp deeplearning/make_dataset.py .
 ### 處理model包
 $wget http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v1_coco_2018_01_28.tar.gz  
 $tar -xzvf ssd_mobilenet_v1_coco_2018_01_28.tar.gz  
-$cp sample/config/ssd_mobilenet_v1_coco.config .
+$cp sample/config/ssd_mobilenet_v1_coco.config .  
+## 修改config
+第9行改為偵測的項目數量  
+最下面的 train 跟 eval 位置更改
 ## 訓練
 移動py檔案  
 $cp legacy/train.py .  
